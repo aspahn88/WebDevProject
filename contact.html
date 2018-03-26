@@ -1,0 +1,175 @@
+<html lang="en">
+
+<head>
+	
+	<meta charset = "utf-8"/>
+	<meta name = "author" content = "Annie Spahn">
+	<meta name = "Keywords" content = "Carnegie Mellon University, CV">
+	<meta name = "description" content = "Annie Spahn Professional Website">
+	<title>Insert Here</title>
+	<link rel="stylesheet" media="all" type="text/css" href="css/styles.css">
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+	<script src="http://code.highcharts.com/highcharts.js"></script>
+	<script src="http://code.highcharts.com/modules/exporting.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#container-graph').highcharts({
+
+			    title: {
+			        text: 'Weekly Workload by Month'
+			    },
+
+			    subtitle: {
+			        text: 'Hours per week of work from 2014-2017'
+			    },
+				
+				xAxis: {
+					title: {
+						text: 'Months'
+					},
+					categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+					'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+				},
+
+			    yAxis: {
+					max: 10,
+					min: 0,
+			        title: {
+			            text: 'Average hours worked each week'
+			        }
+			    },
+				
+				tooltip: {
+					valueSuffix: ' hours per week (on average)'
+				},
+				
+			    legend: {
+			        layout: 'vertical',
+			        align: 'right',
+			        verticalAlign: 'middle'
+			    },
+
+
+			    series: [{
+			           name: '2017',
+			           data: [4, 5, 5.7, 6.9, 9.7, 1.1, 1.3, 1.5]
+			       }, {
+			           name: '2016',
+			           data: [2.5, 2.4, 2.9742, 7.9, 3.2, 3.0, 3.8, 4.8]
+			       }, {
+			           name: '2015',
+			           data: [1.1, 1.7, 1.6, 9.7, 2.8, 7.7, 4.7, 9.8]
+			       }, {
+			           name: '2014',
+			           data: [4.5, .5, 7.9, 1.2, 1.2, 2.4, 3.0, 2.7]
+			       
+			       }],
+		     
+		   
+			});
+		});
+	</script>
+		
+	
+</head>
+
+<body>
+<div id="container">
+	<div id="top_row">
+	<header>
+		<h1>Annie Spahn</h1>
+		<h2>Carnegie Mellon University, Information Systems Program</h2>
+	</header>
+	
+	<nav>
+		<a href="index.html">About</a>
+		<a href="projects.html">Projects</a>
+		<a href="contact.html">Contact</a>
+	</nav>
+	</div>
+	<div id="content">
+		<h3>Contact</h3>
+		<p>Please use the below map to find me</p>
+		<iframe 		src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.418100083975		!2d-	79.94417532020964!3d40.44388226201268!2m3!1f0!2f0!3f0!3m2!1i1024!2i7		68!4f13.1!3m3!1m2!1s0x8834f223e2a39a91%3A0xde4e97a9478f1891!2s5000+Forbes+Av		e%2C+Pittsburgh%2C+PA+15213!5e0!3m2!1sen!2sus!4v1521397157598" width="600" 		height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</br>
+		<p>Please check to see when I'm free</p>
+		</br>
+		<div id="container-graph"></div>
+		<label>Please use the form below to get in touch with me</label></br>
+		</br>
+		<form onsubmit="return validate()">
+			<fieldset>
+				<legend align="center">Tell me more about yourself</legend>
+				<label>Name:</label></br>
+				<input type="text" name="name" size="20" value="Your Name" 				maxlength="250"></br>
+				</br>
+				<label>Your date of birth:</label></br>
+				<input type="text" id = "birthday" name="birtday" value="mm/dd/yyyy" required 				></br>
+			</fieldset>
+			<fieldset>
+				<legend align="center">Tell me about your preferences</legend>
+				<label>Your favorite flower color:</label></br>
+				<input type="color" name="color"></br>
+				</br>
+				<label>Message:<label></br>
+				<TEXTAREA name="message" ROWS=10 COLS=50 maxlength="1000">
+				</TEXTAREA>
+			</fieldset>
+			<fieldset>
+				<legend align="center">Let's stay in touch</legend>
+				<label for="About">How did you find about me?</label>
+				<select>
+					<option value="Google">Google</option>
+					<option value="News Article">News Article</option>
+					<option value-"Friend">Friend</option>
+					<option value="Other">Other</option>
+				</select></br>
+				</br>
+				<label>Please indicate if you want to receive updates via 				email<label></br>
+				</br>
+				<input type="checkbox" id="subscription" name="email 				subscription">
+				<label for="subscripition">Yes, please update me!</label></br>
+				</br>
+				<label>Please provide your email address<label></br>
+				</br>
+				<input id="emailAddress" type="email" placeholder="abc@defg.com" required></br>
+				</br>
+				<label>Please provide your phone number</label></br>
+				</br>
+				<input type="text" id="phone" required></br>
+				</br>
+				<label>Choose a password<label></br>
+				</br>
+				<input type="text" name="password" size=20>
+			</fieldset>
+			<fieldset>
+				<img src="images/submit.png" alt="Photo"/>
+			</fieldset>
+		</form>
+	</div>
+	<div id="sidebar">
+		<h3>Find Me</h3>			
+		Annie Spahn<br/>
+		<a href="http://www.cmu.edu" target="_blank">Carnegie Mellon University</a><br/>
+		5000 Forbes Avenue<br/>
+		Pittsburgh, PA 15213<br/>
+		412-268-0000 (h)<br/>
+		412-555-5555 (c)<br/>
+		<a href="mailto:aspahn@andrew.cmu.edu"><img src="images/email.png"></a>
+		<a href="linkedIn.com"><img src="images/linkedIn.png"></a>
+		<a href="facebook.com"><img src="images/facebook.png"></a>
+	</div>
+	
+	<footer>
+		<hr/>
+		&copy; Annie Spahn 2018<br/>
+		<a href="aspahn@andrew.cmu.edu">Email Me</a>
+		<a href="http://cmu.edu" target="_blank">Carnegie Mellon University</a>
+		
+	</footer>
+	
+	
+</div>	
+</body>
+</html>
